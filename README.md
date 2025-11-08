@@ -1,75 +1,88 @@
-# React + TypeScript + Vite
+🌦️ WeatherJs — Real-Time Weather App
+A modern, animated, and responsive weather app built with React, Tailwind CSS, and Framer Motion.
+It fetches real-time weather data and adapts the theme, icons, and background dynamically for day and night conditions — complete with country flags 🇮🇳 and a glassmorphic UI aesthetic.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🌍 Live Demo
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+👉 WeatherJs Live App
 
-## React Compiler
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+✨ Features
+✅ 🌦 Real-Time Weather: Get current temperature, humidity, and wind speed instantly.
+✅ 🌍 Global Coverage: Fetches real-time weather data for millions of cities worldwide, powered by WeatherAPI’s global network.
+✅ 🌞 / 🌙 Day–Night Mode: Automatically switches background and icon depending on the time of day.
+✅ 🌈 Dynamic Gradients: Color themes change based on weather conditions like rain, sun, clouds, or snow.
+✅ 💫 Animated UI: Smooth transitions powered by Framer Motion.
+✅ 🧊 Glassmorphism Design: Transparent frosted-glass weather card with soft shadows.
+✅ 📱 Responsive: Works perfectly on mobile, tablet, and desktop.
+✅ 🎨 Gradient Text & Icons: Aesthetic design with subtle glow and motion.
+✅ 🔍 Search Function: Fetch weather details for any city instantly.
 
-Note: This will impact Vite dev & build performances.
+🧠 Tech Stack
+TechnologyPurpose⚛️ React.jsCore frontend framework🎨 Tailwind CSSUtility-first styling🌀 Framer MotionAnimations and transitions🌐 Weather APIReal-time weather data source (WeatherAPI.com)
 
-## Expanding the ESLint configuration
+📦 Project Setup
+1️⃣ Clone this repository
+git clone https://github.com/shubham-k9/WeatherJs.git
+cd WeatherJs
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+2️⃣ Install dependencies
+npm install
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+3️⃣ Add your Weather API key
+Create a new file inside /src/utils/Api.js
+and add the following code:
+export const Api = "https://api.weatherapi.com/v1/current.json?key=YOUR_API_KEY&q=";
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+Replace YOUR_API_KEY with your API key from WeatherAPI.com.
+
+4️⃣ Run the project
+npm run dev
+
+Then open your browser at the link shown in the terminal — typically http://localhost:5173
+```
+🧩 Folder Structure
+WeatherJs/
+├── components/
+│   └── Weather.jsx
+├── utils/
+│   └── Api.js
+├── index.html
+├── package.json
+└── tailwind.config.js
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+🌗 Dynamic Themes
+TimeConditionGradientIcon☀️ DayClear / SunnyYellow → Orange☀️🌧️ DayRainyGray → Blue🌧️🌙 NightClear SkyGray → Indigo🌙🌌 NightCloudyGray → Black☁️
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+
+💡 Future Enhancements
+
+
+⛅ 7-Day Forecast Cards
+
+
+🗺️ Auto Location Detection (Geolocation API)
+
+
+🎵 Animated Backgrounds (Floating Clouds / Raindrops)
+
+
+🕹️ Dark–Light Toggle Option
+
+
+
+👨‍💻 Author
+Built with 💙 by
+<span style="font-weight:700; background: linear-gradient(to right, #facc15, #f97316); -webkit-background-clip: text; color: transparent;">Shubham Kadbhane</span>
+
+React Developer | Software Engineer | Car Enthusiast 🚗
+
+
+📜 License
+This project is licensed under the MIT License.
+You are free to use, modify, and distribute it with attribution.
+
