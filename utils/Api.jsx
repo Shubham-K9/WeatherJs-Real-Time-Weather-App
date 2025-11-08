@@ -1,0 +1,1 @@
+export const Api="https://api.weatherapi.com/v1/current.json?key=0c7d0de6508745ec840140250250611&q=";
