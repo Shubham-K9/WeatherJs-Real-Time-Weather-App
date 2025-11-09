@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const Weather = () => {
   const [weather, setWeather] = useState(null);
-  const [city, setCity] = useState("New York");
+  const [city, setCity] = useState("Pune");
   const [searchCity, setSearchCity] = useState("");
   const [background, setBackground] = useState("from-blue-300 to-indigo-400");
   const [icon, setIcon] = useState("☀️");
